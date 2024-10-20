@@ -1,0 +1,16 @@
+services:
+  postgres_client:
+    image: postgres:12.3
+    container_name: db_client
+    networks:
+      - client
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=vaadinstart
+      - POSTGRES_PASSWORD=vaadinstart
+      - POSTGRES_DB=vaadinstart
+
+networks:
+  client:
+    driver: bridge

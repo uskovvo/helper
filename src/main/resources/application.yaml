@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:8082}
+logging:
+  level:
+    org:
+      atmosphere: warn
+
+vaadin:
+  launch-browser: true
+  allowed-packages: com.vaadin,org.vaadin,com.uskov.pet
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vaadinstart
+    username: vaadinstart
+    password: vaadinstart
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+app:
+  jwt:
+    secret: "0R0fQAK5PDYp70cp8oMhD5y5cgTUzk2Ij4vtFmWBT8cHwdxDKspXJQVyJQuDu81nMP2G17YrC5q2bO+E6l6PWg=="

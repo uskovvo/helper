@@ -12,7 +12,7 @@ import jakarta.annotation.security.RolesAllowed;
 
 @PageTitle("Hello World")
 @Route(value = "", layout = MainLayout.class)
-@RolesAllowed("USER")
+@RolesAllowed("ADMIN")
 public class HelloWorldView extends HorizontalLayout {
 
     private TextField name;
